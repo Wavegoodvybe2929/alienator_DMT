@@ -1,146 +1,216 @@
-# VS Code AI Assistant Extension
+# Alienator Enhanced: DMT Research Integration
 
-[![VS Marketplace](https://img.shields.io/vscode-marketplace/v/yourpublisher.vscode-ai-assistant.svg)](https://marketplace.visualstudio.com/items?itemName=yourpublisher.vscode-ai-assistant)  
-[![Installs](https://img.shields.io/vscode-marketplace/i/yourpublisher.vscode-ai-assistant.svg)](https://marketplace.visualstudio.com/items?itemName=yourpublisher.vscode-ai-assistant)  
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+*Expanding upon the original [Alienator project](https://github.com/leizerowicz/alienator) with Andrew Gallimore's cutting-edge DMT consciousness research*
 
 ## Overview
 
-The VS Code AI Assistant is a powerful extension that integrates Puter.js AI capabilities to provide intelligent code assistance through a chat interface directly within Visual Studio Code. Leveraging Puter.js, this extension offers free access to multiple advanced AI models such as GPT-4o, Claude Sonnet, and others, without the need for API keys or subscriptions. It enables developers to get real-time code explanations, bug detection, optimizations, documentation generation, and more, all while seamlessly incorporating code context from your workspace.
+This project extends the foundational work of the Alienator framework by integrating the groundbreaking research of **Andrew Gallimore**, a computational neurobiologist and leading DMT researcher. We combine data analysis tools with theoretical frameworks from Gallimore's work on psychedelic drug technologies and consciousness exploration.
 
-Key benefits include:
-- **No API Key Management**: Users don't need personal OpenAI or Claude API keys—Puter.js handles it via its "User Pays" model.
-- **Multiple AI Models**: Switch between models like GPT-4o, Claude 3.5 Sonnet, o1, o3-mini, and DALL-E 3.
-- **Persistent Storage**: Chat history saved using Puter.js KV storage.
-- **Code Context Integration**: Automatically includes selected code, file content, and workspace details in queries.
-- **Free and Accessible**: No cost barriers, making AI assistance available to all developers.
+## About Andrew Gallimore's Research
 
-This extension was developed following a 6-week implementation plan, focusing on ease of use, performance, and integration with VS Code APIs.
+Dr. Andrew Gallimore is a computational neurobiologist, pharmacologist, and author whose work bridges neuroscience, consciousness studies, and psychedelic research. His contributions include:
 
-## Features
+### Key Research Areas
+- **DMT Pharmacokinetics**: Developed target-controlled intravenous infusion protocols for extended DMT experiences (collaboration with Dr. Rick Strassman, 2016)
+- **Alien Information Theory**: Theoretical framework proposing psychedelics as technologies for accessing non-ordinary reality structures
+- **Computational Neuroscience**: Neural basis of psychedelic drug action and consciousness
+- **Reality Switch Technologies**: Psychedelics as tools for discovering and exploring new dimensional spaces
 
-- **Chat Interface**: Interactive chat panel for conversing with AI models.
-  - Supports text messages, code blocks with syntax highlighting, file references, and inline suggestions.
-  - Model selection dropdown (e.g., GPT-4o, Claude Sonnet).
-  - Interactive elements: Apply code suggestions directly to the editor, copy code blocks, save conversations.
-- **Code Assistance**:
-  - Explain selected code.
-  - Detect bugs and suggest fixes.
-  - Optimize code for performance.
-  - Generate documentation and comments.
-  - Refactor code structures.
-  - Create boilerplate code, test cases, and configuration templates.
-- **Context-Aware Functionality**:
-  - Extracts current file content, selected text, workspace structure, and relevant files.
-  - Conversation threading and history search.
-- **Advanced Integration**:
-  - Uses VS Code APIs for hover suggestions, custom commands, and editor interactions.
-  - Error handling for network issues, rate limits, and service availability.
-- **UI/UX**:
-  - Integrates with VS Code themes.
-  - Responsive design, loading indicators, and typing animations.
+### Notable Publications & Works
+- *Alien Information Theory: Psychedelic Drug Technologies and the Cosmic Game*
+- *Reality Switch Technologies: Psychedelics as Tools for the Discovery and Exploration of New Worlds*
+- *Death by Astonishment* (forthcoming, July 2025)
+- Multiple peer-reviewed papers on DMT pharmacology and consciousness
+
+## Project Integration
+
+This enhanced version incorporates Gallimore's theoretical frameworks:
+
+### 1. **Extended State Modeling**
+Building on the original alienator's entity detection, we now model:
+- **Breakthrough experiences** using Gallimore's pharmacokinetic models
+- **Entity interaction patterns** based on reported DMT encounters
+- **Consciousness state transitions** during psychedelic experiences
+
+### 2. **Information Theory Implementation**
+- **Alien Information Processing**: Algorithms inspired by Gallimore's theory that psychedelics access non-human information systems
+- **Reality Switch Detection**: Identifying transition points between ordinary and non-ordinary consciousness states
+- **Dimensional Mapping**: Tools for exploring the geometric and mathematical structures reported in DMT experiences
+
+### 3. **Research Data Integration**
+- Compatible with datasets from controlled DMT studies
+- Integration with EEG/neuroimaging data from psychedelic research
+- Support for phenomenological report analysis
 
 ## Installation
 
-### From VS Code Marketplace
-1. Open Visual Studio Code.
-2. Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on macOS).
-3. Search for "VS Code AI Assistant".
-4. Click Install.
+```bash
+git clone https://github.com/[your-username]/alienator-enhanced
+cd alienator-enhanced
+pip install -r requirements.txt
+```
 
-### From VSIX File (for Development or Offline Installation)
-1. Download the `.vsix` file from the [releases page](https://github.com/yourusername/vscode-ai-assistant/releases).
-2. In VS Code, go to Extensions view > More Actions (...) > Install from VSIX...
-3. Select the downloaded file.
-
-### Prerequisites
-- Visual Studio Code version 1.60.0 or higher.
-- Internet connection for Puter.js AI services (no API keys required).
+### Dependencies
+```
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+scipy>=1.7.0
+networkx>=2.6.0
+psychedelic-research-tools>=0.1.0  # Custom package for psychedelic data analysis
+consciousness-modeling>=0.2.0      # Theoretical consciousness frameworks
+```
 
 ## Usage
 
-### Opening the Chat
-- Use the command palette (Ctrl+Shift+P or Cmd+Shift+P): Type "AI Assistant: Open Chat".
-- Or, use the status bar icon (if configured) or keybinding.
+### Basic Entity Detection (Original Alienator)
+```python
+from alienator import EntityDetector, ExperienceAnalyzer
 
-### Commands
-The extension provides several commands accessible via the command palette:
-- **AI Assistant: Open Chat**: Opens the chat panel.
-- **AI Assistant: Explain Code**: Explains the selected code in the editor.
-- **AI Assistant: Generate Tests**: Generates test cases for selected code.
-- **AI Assistant: Optimize Code**: Suggests optimizations for selected code.
-- **AI Assistant: Generate Documentation**: Creates docs for selected code.
-
-### Chat Interaction
-1. Select a model from the dropdown (default: GPT-4o).
-2. Type your query in the input field and press Send (or Enter).
-3. The AI responds with formatted text/code.
-4. For code responses: Click "Apply Code" to insert into the active editor.
-5. Save conversations using the "Save Conversation" button—stored via Puter.js KV.
-
-### Configuration
-Customize the extension via VS Code Settings (File > Preferences > Settings > Extensions > AI Assistant):
-- `aiAssistant.defaultModel`: Default AI model (e.g., "gpt-4o").
-- `aiAssistant.maxTokens`: Maximum tokens for responses (default: 2000).
-- `aiAssistant.includeFileContext`: Include file context in queries (default: true).
-- `aiAssistant.autoSaveConversations`: Automatically save chat history (default: true).
-
-## Development and Contributing
-
-### Project Structure
-```
-vscode-ai-assistant/
-├── src/
-│   ├── extension.ts        # Main entry point
-│   ├── chatProvider.ts     # Chat webview management
-│   ├── aiService.ts        # Puter.js AI integration
-│   └── utils/
-│       ├── codeAnalysis.ts # Code context extraction
-│       └── messageFormat.ts # Message formatting
-├── webview/                # Chat UI files
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-├── media/                  # Icons and assets
-├── package.json            # Extension metadata
-├── tsconfig.json           # TypeScript configuration
-└── README.md               # This file
+# Original functionality preserved
+detector = EntityDetector()
+entities = detector.scan_experience_report(report_text)
 ```
 
-### Building Locally
-1. Clone the repository: `git clone https://github.com/yourusername/vscode-ai-assistant.git`
-2. Install dependencies: `npm install`
-3. Compile: `npm run compile`
-4. Run in debug mode: Press F5 in VS Code (opens a new window with the extension loaded).
+### Enhanced DMT Analysis
+```python
+from alienator_enhanced import GallimoreFramework, DMTAnalyzer
 
-### Contributing
-We welcome contributions! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit changes: `git commit -m "Add new feature"`
-4. Push to the branch: `git push origin feature/new-feature`
-5. Open a Pull Request.
+# Initialize Gallimore's theoretical framework
+framework = GallimoreFramework()
 
-Report issues or suggest features via [GitHub Issues](https://github.com/yourusername/vscode-ai-assistant/issues).
+# Analyze DMT experience using pharmacokinetic models
+analyzer = DMTAnalyzer(framework)
+breakthrough_probability = analyzer.calculate_breakthrough_threshold(dose_mg=50)
 
-### Testing
-- Unit tests: Core functions in `aiService.ts` and utils.
-- Integration tests: VS Code API interactions.
-- Run tests: `npm test`
+# Reality switch detection
+reality_switches = analyzer.detect_reality_transitions(eeg_data)
 
-## Known Issues
-- Puter.js availability: Dependent on Puter.js service; handle offline scenarios gracefully.
-- Large files: Context inclusion may truncate for very large files.
-- Model limitations: Some models (e.g., DALL-E) may not support code-specific tasks.
+# Entity interaction analysis
+entity_network = analyzer.map_entity_interactions(experience_reports)
+```
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
+### Advanced Consciousness Modeling
+```python
+from alienator_enhanced import ConsciousnessMapper, AlienInfoProcessor
+
+# Map consciousness state changes
+mapper = ConsciousnessMapper()
+state_trajectory = mapper.model_experience_trajectory(
+    dose_curve=dose_timeline,
+    report_data=experience_description
+)
+
+# Process alien information patterns
+info_processor = AlienInfoProcessor()
+alien_patterns = info_processor.extract_non_human_information(
+    visual_reports=visual_descriptions,
+    auditory_reports=auditory_descriptions
+)
+```
+
+## Research Applications
+
+### Academic Research
+- **Neuroscience Studies**: Integration with fMRI, EEG, and other neuroimaging data
+- **Consciousness Research**: Modeling altered states and breakthrough experiences  
+- **Pharmacology**: Dose-response relationship analysis using Gallimore's models
+- **Anthropology**: Cross-cultural analysis of entity encounter reports
+
+### Clinical Applications
+- **Therapeutic Protocol Development**: Optimizing dosing for therapeutic outcomes
+- **Safety Monitoring**: Predicting and modeling adverse reaction patterns
+- **Treatment Planning**: Personalized psychedelic therapy approaches
+
+### Theoretical Exploration
+- **Reality Structure Analysis**: Testing Gallimore's theoretical frameworks with data
+- **Information Theory Validation**: Empirical testing of alien information theory
+- **Consciousness Cartography**: Mapping the topology of psychedelic experiences
+
+## Data Formats
+
+### Experience Reports
+```json
+{
+  "session_id": "unique_identifier",
+  "participant": "anonymous_code",
+  "substance": "N,N-DMT",
+  "dose_mg": 50,
+  "administration": "vaporized",
+  "duration_minutes": 15,
+  "breakthrough": true,
+  "entities_encountered": ["geometric_beings", "machine_elves"],
+  "visual_complexity": 9.2,
+  "reality_switch_timestamps": [2.3, 4.7, 12.1],
+  "phenomenological_report": "text_description"
+}
+```
+
+### Neuroimaging Integration
+```python
+# EEG data processing for consciousness state detection
+from alienator_enhanced import NeuroIntegrator
+
+integrator = NeuroIntegrator()
+consciousness_states = integrator.process_eeg_data(
+    eeg_file="session_001.edf",
+    experience_timeline=timeline_data
+)
+```
+
+## Contributing
+
+We welcome contributions that advance both computational analysis and theoretical understanding of consciousness:
+
+1. **Code Contributions**: Improved algorithms, new analysis methods
+2. **Data Contributions**: Anonymized experience reports, research datasets  
+3. **Theoretical Extensions**: Implementation of new consciousness models
+4. **Research Collaboration**: Academic partnerships and study integration
+
+### Research Ethics
+All contributions must adhere to:
+- Participant anonymity and data protection
+- Institutional ethics approval for human research
+- Responsible disclosure of research findings
+- Harm reduction principles
+
+## Citations
+
+If using this work in academic research, please cite:
+
+```bibtex
+@software{alienator_enhanced,
+  title={Alienator Enhanced: DMT Research Integration},
+  author={[Your Name] and Contributors},
+  year={2025},
+  note={Building upon Gallimore, A. and Strassman, R. research frameworks}
+}
+
+@article{gallimore2016dmt,
+  title={A model for the application of target-controlled intravenous infusion for a prolonged immersive DMT psychedelic experience},
+  author={Gallimore, Andrew and Strassman, Rick},
+  journal={Frontiers in Pharmacology},
+  volume={7},
+  pages={211},
+  year={2016}
+}
+```
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+MIT License - Building upon open science principles
 
 ## Acknowledgments
-- Built with [Puter.js](https://puter.com/) for AI integration.
-- Inspired by VS Code extension best practices from Microsoft documentation.
 
-For more details, visit the [project repository](https://github.com/yourusername/vscode-ai-assistant).
+- **Original Alienator Project**: [@leizerowicz](https://github.com/leizerowicz)
+- **Dr. Andrew Gallimore**: Theoretical frameworks and DMT research
+- **Dr. Rick Strassman**: Pioneering DMT consciousness research
+- **Psychedelic Research Community**: For advancing our understanding of consciousness
+
+## Disclaimer
+
+This project is for research and educational purposes only. It does not promote or facilitate illegal drug use. All research should be conducted within legal frameworks and with appropriate institutional oversight. The theoretical models implemented here are experimental and should not be used for medical or therapeutic purposes without proper clinical supervision.
+
+---
+
+*"The alien information accessible via DMT may represent the most important discovery in the history of science, potentially providing us with access to forms of knowledge and ways of being that could transform our understanding of reality itself."* - Andrew Gallimore
